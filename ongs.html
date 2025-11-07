@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todas as ONGs - Doe Aqui</title>
+  <meta name="description" content="Encontre uma causa que toca seu coração">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header (same as index.html) -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+          <span class="logo-text">Doe Aqui</span>
+        </a>
+
+        <nav>
+          <a href="index.html">Início</a>
+          <a href="ongs.html" class="active">ONGs</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="contato.html">Contato</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button id="theme-toggle" class="btn btn-icon btn-ghost">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+            </svg>
+          </button>
+          <a href="cadastro.html" class="btn btn-outline">Cadastrar ONG</a>
+          <a href="ongs.html" class="btn btn-primary">Quero Doar</a>
+        </div>
+
+        <button id="menu-toggle" class="btn btn-icon btn-ghost menu-toggle">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="mobile-menu">
+        <a href="index.html">Início</a>
+        <a href="ongs.html">ONGs</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main style="padding: 3rem 1rem;">
+    <div class="container">
+      <div style="margin-bottom: 2rem;">
+        <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;">Todas as ONGs</h1>
+        <p class="text-muted">Encontre uma causa que toca seu coração</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="grid grid-cols-1 grid-cols-md-3" style="margin-bottom: 2rem;">
+        <div style="position: relative;">
+          <svg style="position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); color: var(--muted-foreground);" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          <input type="text" id="search-input" class="form-input" placeholder="Buscar por nome..." style="padding-left: 2.5rem;">
+        </div>
+
+        <select id="city-filter" class="form-select">
+          <option value="all">Todas as cidades</option>
+        </select>
+
+        <select id="category-filter" class="form-select">
+          <option value="all">Todas as categorias</option>
+        </select>
+      </div>
+
+      <!-- Results Count -->
+      <div style="margin-bottom: 1rem;">
+        <p id="results-count" class="text-muted"></p>
+      </div>
+
+      <!-- ONGs Grid -->
+      <div id="ongs-grid" class="grid grid-cols-1 grid-cols-md-3"></div>
+
+      <!-- No Results -->
+      <div id="no-results" class="hidden text-center" style="padding: 3rem 0;">
+        <p style="font-size: 1.125rem; color: var(--muted-foreground);">
+          Nenhuma ONG encontrada com os filtros selecionados.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+            <div class="logo-icon" style="width: 2.5rem; height: 2.5rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </div>
+            <span class="logo-text" style="font-size: 1.25rem;">Doe Aqui</span>
+          </div>
+          <p style="font-size: 0.875rem; color: var(--muted-foreground);">
+            Conectando doadores e ONGs para transformar vidas através da solidariedade.
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Doe Aqui. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/localStorage.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    let allOngs = getAllOngs();
+    let filteredOngs = allOngs;
+
+    // Populate filters
+    const cities = ['all', ...new Set(allOngs.map(ong => ong.city))];
+    const categories = ['all', ...new Set(allOngs.map(ong => ong.category))];
+
+    const cityFilter = document.getElementById('city-filter');
+    cities.slice(1).forEach(city => {
+      const option = document.createElement('option');
+      option.value = city;
+      option.textContent = city;
+      cityFilter.appendChild(option);
+    });
+
+    const categoryFilter = document.getElementById('category-filter');
+    categories.slice(1).forEach(category => {
+      const option = document.createElement('option');
+      option.value = category;
+      option.textContent = category;
+      categoryFilter.appendChild(option);
+    });
+
+    // Filter function
+    function filterOngs() {
+      const searchTerm = document.getElementById('search-input').value.toLowerCase();
+      const selectedCity = document.getElementById('city-filter').value;
+      const selectedCategory = document.getElementById('category-filter').value;
+
+      filteredOngs = allOngs.filter(ong => {
+        const matchesSearch = ong.name.toLowerCase().includes(searchTerm) || 
+                             ong.description.toLowerCase().includes(searchTerm);
+        const matchesCity = selectedCity === 'all' || ong.city === selectedCity;
+        const matchesCategory = selectedCategory === 'all' || ong.category === selectedCategory;
+        
+        return matchesSearch && matchesCity && matchesCategory;
+      });
+
+      renderOngs();
+    }
+
+    // Render ONGs
+    function renderOngs() {
+      const grid = document.getElementById('ongs-grid');
+      const noResults = document.getElementById('no-results');
+      const resultsCount = document.getElementById('results-count');
+
+      resultsCount.textContent = `${filteredOngs.length} ${filteredOngs.length === 1 ? 'ONG encontrada' : 'ONGs encontradas'}`;
+
+      if (filteredOngs.length === 0) {
+        grid.innerHTML = '';
+        noResults.classList.remove('hidden');
+      } else {
+        noResults.classList.add('hidden');
+        grid.innerHTML = filteredOngs.map(ong => generateONGCard(ong)).join('');
+      }
+    }
+
+    // Event listeners
+    document.getElementById('search-input').addEventListener('input', filterOngs);
+    document.getElementById('city-filter').addEventListener('change', filterOngs);
+    document.getElementById('category-filter').addEventListener('change', filterOngs);
+
+    // Initial render
+    renderOngs();
+  </script>
+</body>
+</html>

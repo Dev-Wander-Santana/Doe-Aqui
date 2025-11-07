@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Doe Aqui</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+          <span class="logo-text">Doe Aqui</span>
+        </a>
+        <nav>
+          <a href="index.html">Início</a>
+          <a href="ongs.html">ONGs</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="contato.html" class="active">Contato</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding: 3rem 1rem;">
+    <div class="container" style="max-width: 900px;">
+      <div class="text-center" style="margin-bottom: 2rem;">
+        <div style="width: 4rem; height: 4rem; border-radius: 50%; background: linear-gradient(to bottom right, var(--primary), var(--primary-dark)); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </div>
+        <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;">Entre em Contato</h1>
+        <p class="text-muted">Tem dúvidas ou sugestões? Estamos aqui para ajudar!</p>
+      </div>
+
+      <div class="grid grid-cols-1 grid-cols-md-3" style="margin-bottom: 2rem;">
+        <div class="card text-center" style="padding: 1.5rem;">
+          <div style="width: 3rem; height: 3rem; border-radius: 0.5rem; background: linear-gradient(to bottom right, var(--primary), var(--primary-dark)); display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <h3 style="font-weight: 600; margin-bottom: 0.25rem;">Email</h3>
+          <p style="font-size: 0.875rem; color: var(--muted-foreground);">contato@doeaqui.com.br</p>
+        </div>
+
+        <div class="card text-center" style="padding: 1.5rem;">
+          <div style="width: 3rem; height: 3rem; border-radius: 0.5rem; background: linear-gradient(to bottom right, var(--secondary), var(--secondary-dark)); display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <h3 style="font-weight: 600; margin-bottom: 0.25rem;">WhatsApp</h3>
+          <p style="font-size: 0.875rem; color: var(--muted-foreground);">(11) 99999-9999</p>
+        </div>
+
+        <div class="card text-center" style="padding: 1.5rem;">
+          <div style="width: 3rem; height: 3rem; border-radius: 0.5rem; background: linear-gradient(to bottom right, var(--primary), var(--primary-dark)); display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3 style="font-weight: 600; margin-bottom: 0.25rem;">Horário</h3>
+          <p style="font-size: 0.875rem; color: var(--muted-foreground);">Seg-Sex: 9h às 18h</p>
+        </div>
+      </div>
+
+      <div id="form-content">
+        <div class="card" style="padding: 1.5rem;">
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="name">Nome *</label>
+              <input type="text" id="name" class="form-input" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email *</label>
+              <input type="email" id="email" class="form-input" placeholder="seu@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Mensagem *</label>
+              <textarea id="message" class="form-textarea" rows="6" placeholder="Como podemos ajudar?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.125rem; padding: 1.5rem;">
+              Enviar Mensagem
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div id="success-content" class="hidden">
+        <div class="card" style="padding: 2rem; text-align: center;">
+          <div style="width: 5rem; height: 5rem; border-radius: 50%; background: var(--secondary); opacity: 0.2; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          
+          <h2 style="font-size: 1.875rem; font-weight: 700; margin-bottom: 1rem;">Mensagem Enviada!</h2>
+          <p class="text-muted" style="margin-bottom: 1.5rem;">
+            Obrigado por entrar em contato. Responderemos em breve!
+          </p>
+          
+          <div style="display: flex; gap: 0.75rem; justify-content: center;">
+            <button onclick="location.reload()" class="btn btn-outline">Enviar outra mensagem</button>
+            <a href="index.html" class="btn btn-primary">Voltar para o início</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2025 Doe Aqui. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('form-content').classList.add('hidden');
+      document.getElementById('success-content').classList.remove('hidden');
+      showToast('Mensagem enviada com sucesso!');
+    });
+  </script>
+</body>
+</html>

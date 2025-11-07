@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doe Aqui - Transforme Vidas com Sua Doação</title>
+  <meta name="description" content="Conecte-se a ONGs verificadas e faça doações via Pix de forma rápida, segura e transparente. Transforme vidas através da solidariedade.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+          <span class="logo-text">Doe Aqui</span>
+        </a>
+
+        <nav>
+          <a href="index.html">Início</a>
+          <a href="ongs.html">ONGs</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="contato.html">Contato</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button id="theme-toggle" class="btn btn-icon btn-ghost">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+          <a href="cadastro.html" class="btn btn-outline">Cadastrar ONG</a>
+          <a href="ongs.html" class="btn btn-primary">Quero Doar</a>
+        </div>
+
+        <button id="menu-toggle" class="btn btn-icon btn-ghost menu-toggle">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="mobile-menu">
+        <a href="index.html">Início</a>
+        <a href="ongs.html">ONGs</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+        <div style="display: flex; gap: 0.5rem;">
+          <a href="cadastro.html" class="btn btn-outline" style="flex: 1;">Cadastrar ONG</a>
+          <a href="ongs.html" class="btn btn-primary" style="flex: 1;">Doar</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+<section class="hero">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="video.mp4" type="video/mp4">
+    Seu navegador não suporta vídeos em HTML5.
+  </video>
+
+  <div class="container">
+    <h1>Transforme Vidas com Sua Doação</h1>
+    <p>Conectamos você a ONGs sérias e transparentes que fazem a diferença</p>
+    <div class="hero-actions">
+      <a href="ongs.html" class="btn" style="background: white; color: var(--primary); font-size: 1.125rem; padding: 1.5rem 2rem;">
+        💚 Quero Doar
+      </a>
+      <a href="cadastro.html" class="btn btn-outline" style="border: 2px solid white; color: white; font-size: 1.125rem; padding: 1.5rem 2rem;">
+        🏢 Cadastrar minha ONG
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Stats -->
+  <section style="padding: 4rem 1rem; margin-top: -3rem;">
+    <div class="container">
+      <div class="grid grid-cols-1 grid-cols-md-3">
+        <div class="card" style="padding: 1.5rem;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <p style="font-size: 0.875rem; color: var(--muted-foreground); margin-bottom: 0.25rem;">Total Arrecadado</p>
+              <p id="total-donated" style="font-size: 1.875rem; font-weight: 700;">R$ 0,00</p>
+            </div>
+            <div style="width: 3rem; height: 3rem; border-radius: 0.5rem; background: linear-gradient(to bottom right, var(--primary), var(--primary-light)); display: flex; align-items: center; justify-content: center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 1.5rem;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <p style="font-size: 0.875rem; color: var(--muted-foreground); margin-bottom: 0.25rem;">ONGs Cadastradas</p>
+              <p id="total-ongs" style="font-size: 1.875rem; font-weight: 700;">6</p>
+            </div>
+            <div style="width: 3rem; height: 3rem; border-radius: 0.5rem; background: linear-gradient(to bottom right, var(--secondary), var(--secondary-light)); display: flex; align-items: center; justify-content: center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 1.5rem;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <p style="font-size: 0.875rem; color: var(--muted-foreground); margin-bottom: 0.25rem;">Doações Realizadas</p>
+              <p id="total-donations-count" style="font-size: 1.875rem; font-weight: 700;">0</p>
+            </div>
+            <div style="width: 3rem; height: 3rem; border-radius: 0.5rem; background: linear-gradient(to bottom right, var(--accent), var(--primary)); display: flex; align-items: center; justify-content: center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works -->
+  <section style="padding: 4rem 1rem; background: var(--muted);">
+    <div class="container">
+      <h2 style="font-size: 2.25rem; font-weight: 700; text-align: center; margin-bottom: 3rem;">Como Funciona?</h2>
+      <div class="grid grid-cols-1 grid-cols-md-3">
+        <div style="text-align: center;">
+          <div style="width: 4rem; height: 4rem; border-radius: 50%; background: linear-gradient(to bottom right, var(--primary), var(--primary-dark)); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">1. Escolha uma ONG</h3>
+          <p class="text-muted">Navegue por nossa lista de ONGs verificadas e escolha uma causa que toca seu coração</p>
+        </div>
+
+        <div style="text-align: center;">
+          <div style="width: 4rem; height: 4rem; border-radius: 50%; background: linear-gradient(to bottom right, var(--secondary), var(--secondary-dark)); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">2. Faça sua Doação</h3>
+          <p class="text-muted">Doe o valor que desejar via Pix de forma rápida, segura e transparente</p>
+        </div>
+
+        <div style="text-align: center;">
+          <div style="width: 4rem; height: 4rem; border-radius: 50%; background: linear-gradient(to bottom right, var(--primary), var(--primary-dark)); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">3. Acompanhe o Impacto</h3>
+          <p class="text-muted">Veja como sua doação está fazendo a diferença na vida de pessoas e animais</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured ONGs -->
+  <section style="padding: 4rem 1rem;">
+    <div class="container">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem;">
+        <h2 style="font-size: 2.25rem; font-weight: 700;">ONGs em Destaque</h2>
+        <a href="ongs.html" class="btn btn-outline">Ver todas</a>
+      </div>
+      <div id="featured-ongs" class="grid grid-cols-1 grid-cols-md-3"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+            <div class="logo-icon" style="width: 2.5rem; height: 2.5rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </div>
+            <span class="logo-text" style="font-size: 1.25rem;">Doe Aqui</span>
+          </div>
+          <p style="font-size: 0.875rem; color: var(--muted-foreground);">
+            Conectando doadores e ONGs para transformar vidas através da solidariedade.
+          </p>
+        </div>
+
+        <div>
+          <h3 style="font-weight: 600; margin-bottom: 1rem;">Links Rápidos</h3>
+          <ul style="list-style: none; font-size: 0.875rem;">
+            <li style="margin-bottom: 0.5rem;"><a href="index.html" style="color: var(--muted-foreground); text-decoration: none;">Início</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="ongs.html" style="color: var(--muted-foreground); text-decoration: none;">ONGs</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="sobre.html" style="color: var(--muted-foreground); text-decoration: none;">Sobre</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="contato.html" style="color: var(--muted-foreground); text-decoration: none;">Contato</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 style="font-weight: 600; margin-bottom: 1rem;">Para ONGs</h3>
+          <ul style="list-style: none; font-size: 0.875rem;">
+            <li style="margin-bottom: 0.5rem;"><a href="cadastro.html" style="color: var(--muted-foreground); text-decoration: none;">Cadastrar ONG</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 style="font-weight: 600; margin-bottom: 1rem;">Redes Sociais</h3>
+          <div style="display: flex; gap: 0.75rem;">
+            <a href="#" style="width: 2.25rem; height: 2.25rem; border-radius: 50%; background: var(--muted); display: flex; align-items: center; justify-content: center; transition: all 0.3s;">
+              <span>f</span>
+            </a>
+            <a href="#" style="width: 2.25rem; height: 2.25rem; border-radius: 50%; background: var(--muted); display: flex; align-items: center; justify-content: center; transition: all 0.3s;">
+              <span>i</span>
+            </a>
+            <a href="#" style="width: 2.25rem; height: 2.25rem; border-radius: 50%; background: var(--muted); display: flex; align-items: center; justify-content: center; transition: all 0.3s;">
+              <span>t</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Doe Aqui. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/localStorage.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Load stats
+    document.getElementById('total-donated').textContent = formatCurrency(getTotalDonated());
+    document.getElementById('total-donations-count').textContent = getTotalDonations();
+    document.getElementById('total-ongs').textContent = getAllOngs().length;
+
+    // Load featured ONGs
+    const featuredOngs = getAllOngs().slice(0, 3);
+    const featuredContainer = document.getElementById('featured-ongs');
+    featuredContainer.innerHTML = featuredOngs.map(ong => generateONGCard(ong)).join('');
+  </script>
+</body>
+</html>

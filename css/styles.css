@@ -1,4 +1,3 @@
-/* Doe Aqui - Styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
@@ -58,7 +57,16 @@ body {
   margin: 0 auto;
   padding: 0 1rem;
 }
-
+h6 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.55);
+  letter-spacing: 0.5px;
+}
 /* Header */
 header {
   position: sticky;
